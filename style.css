@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+/*Root*/
+:root {
+  --clr-primary-400: hsl(75, 94%, 57%);
+
+  --clr-neutral-900: hsl(0, 0%, 8%);
+  --clr-neutral-700: hsl(0, 0%, 12%);
+  --clr-neutral-600: hsl(0, 0%, 20%);
+  --clr-neutral-500: hsl(0, 0%, 32%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-primary: "Inter", sans-serif;
+
+  --fs-body: 1.4rem;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--clr-neutral-900);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-100);
+  min-height: 100vh;
+  font-family: var(--ff-primary);
+  display: grid;
+  place-content: center;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+}
+.container {
+  padding-inline: 15rem;
+  margin: 7rem auto;
+}
+.profile {
+  background-color: var(--clr-neutral-700);
+  min-width: 32rem;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  text-align: center;
+}
+@media (min-width: 480px) {
+  .container {
+    margin-top: 2rem;
+  }
+  .profile {
+    width: 40rem;
+  }
+}
+.profile .social-avatar {
+  width: 9rem;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+.profile .social-avatar img {
+  display: inherit;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.profile .profile-header .social-info {
+  margin-top: 2rem;
+}
+.profile .profile-header .social-info .name {
+  font-size: 2.3rem;
+}
+.profile .profile-header .social-info .address {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.profile .social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+.profile .social-links li {
+  width: 100%;
+}
+.profile .social-links li a {
+  background-color: var(--clr-neutral-600);
+  color: var(--clr-neutral-100);
+  padding: 1.6rem 0;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  font-weight: var(--fw-semi-bold);
+  transition: all 0.3s ease-in-out;
+}
+.profile .social-links li:hover a {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-900);
+}
+/*Utility classes*/
+.text-primary-400 {
+  color: var(--clr-primary-400);
+}
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.text-neutral-500 {
+  color: var(--clr-neutral-500);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
